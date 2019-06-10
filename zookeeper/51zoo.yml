@@ -57,10 +57,13 @@ spec:
           name: leader-election
         resources:
           requests:
-            cpu: 10m
-            memory: 100Mi
+            # CONPERI-CUSTOMIZATION 10m > 50m
+            cpu: 50m
+            # CONPERI-CUSTOMIZATION 100Mi > 150Mi
+            memory: 150Mi
           limits:
-            memory: 120Mi
+            # CONPERI-CUSTOMIZATION 120Mi > 250Mi
+            memory: 250Mi
         readinessProbe:
           exec:
             command:
